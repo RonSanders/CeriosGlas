@@ -1,22 +1,23 @@
 package nl.cerios.glaswerk;
 
-public class TafelService implements GlasIF{
+import java.util.List;
+
+public class TafelService { // geen implements want het is geen type glas!!!!
+	
+	GlasFabriek glasFabriek = new GlasFabriek();
 	
 	public float dek() {
+		List<GlasIF> dienblad = glasFabriek.maakDienblad();
+		//dienblad.size(); object. functienaam en kijken wat een functie kan doen!
+		for (GlasIF glas: dienblad) {
+			float inhoudGlas = glas.getContents();
+			//optellen van de inhoud!
+			System.out.println(inhoudGlas);
+		}
 		return 0;
 	}
 
-	@Override
-	public float getContents() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void breek() throws DiggelenException {
-		// TODO Auto-generated method stub
-		
-	}	
+	
 	//Implementatie: vraagt de GlasFabriek een dienblad te maken en telt de inhoud van de glazen op.
 
 	/**

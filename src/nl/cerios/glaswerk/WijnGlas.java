@@ -2,44 +2,16 @@ package nl.cerios.glaswerk;
 
 public class WijnGlas extends Glas implements GlasIF {
 
-	private float witwijnglas = 1;
-	private float rodewijnglas = 1;
-	private float champagneglas;
-
-	public float getWitwijnglas() {
-		return witwijnglas;
-	}
-
-	public void setWitwijnglas(float witwijnglas) {
-		this.witwijnglas = witwijnglas;
-	}
-
-	public float getRodewijnglas() {
-		return rodewijnglas;
-	}
-
-	public void setRodewijnglas(float rodewijnglas) {
-		this.rodewijnglas = rodewijnglas;
-	}
-
-	public float getChampagneglas() {
-		return champagneglas;
-	}
-
-	public void setChampagneglas(float champagneglas) {
-		this.champagneglas = champagneglas;
-	}
+	  //niet groeperen het WijnGlas is een los onderdeel met eigenschappen en die staan hier in!
+	private float inhoud = 0.25f;
 
 	@Override
 	public float getContents() {
-		float content;
-		content = getWitwijnglas()+getRodewijnglas();
-		return content;
+		return inhoud;
 	}
 
 	@Override
 	public void breek() throws DiggelenException {
-		// TODO Auto-generated method stub
-		
+				
 	}
 }
