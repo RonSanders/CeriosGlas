@@ -1,6 +1,7 @@
 package nl.cerios.glaswerk;
 
-public class TafelService extends GlasFabriek implements GlasIF{
+public class TafelService implements GlasIF{
+	
 	public float dek() {
 		return 0;
 	}
@@ -15,8 +16,7 @@ public class TafelService extends GlasFabriek implements GlasIF{
 	public void breek() throws DiggelenException {
 		// TODO Auto-generated method stub
 		
-	}
-	
+	}	
 	//Implementatie: vraagt de GlasFabriek een dienblad te maken en telt de inhoud van de glazen op.
 
 	/**
