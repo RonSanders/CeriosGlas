@@ -9,10 +9,15 @@ public class TafelService { // geen implements want het is geen type glas!!!!
 	public float dek() {
 		List<GlasIF> dienblad = glasFabriek.maakDienblad();
 		//dienblad.size(); object. functienaam en kijken wat een functie kan doen!
-		for (GlasIF glas: dienblad) {
+		float total = 0;
+		for (GlasIF glas: dienblad) { // mijn lijst is hier dienblad een verzameling! Enhanced forloop gaat door de verzameling heen
+			// links is altijd wat voor obect erin zit : rechts is de collectie/verzameling/lijst!
+			//Enhanced gaat gaat altijd door de hele lijst voor elk element in de lijst doet hij onderstaand! Lijst 0 tot ...
 			float inhoudGlas = glas.getContents();
+			total += inhoudGlas;
 			//optellen van de inhoud!
-			System.out.println(inhoudGlas);
+			System.out.println("Het inhoud per glas: "+inhoudGlas);
+			System.out.println("De totale inhoud van alle glazen: "+total);
 		}
 		return 0;
 	}
