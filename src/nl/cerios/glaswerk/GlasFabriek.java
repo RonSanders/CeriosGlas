@@ -3,6 +3,11 @@ package nl.cerios.glaswerk;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author rsanders
+ *
+ *Implementeer de functie door een lijst te maken van 3 bierglazen en 2 wijnglazen.
+ */
 public class GlasFabriek {
 	
 	public List<GlasIF> maakDienblad() {
@@ -22,7 +27,4 @@ public class GlasFabriek {
 		
 		return dienblad;
 	}
-	
-	//Implementeer de functie door een lijst te maken van 3 bierglazen en 2 wijnglazen.
-
 }

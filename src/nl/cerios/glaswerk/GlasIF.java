@@ -1,6 +1,11 @@
 package nl.cerios.glaswerk;
 
-public interface GlasIF {// geen implementatie, geen code > alleen declaraties
+/**
+ * @author rsanders
+ *
+ *geen implementatie, geen code > alleen declaraties
+ */
+public interface GlasIF {
 	float getContents();
 	void breek() throws DiggelenException;
 
