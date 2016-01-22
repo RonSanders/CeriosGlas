@@ -16,19 +16,18 @@ import java.util.List;
 public class TafelService { // geen implements want het is geen type glas!!!!
 	
 	GlasFabriek glasFabriek = new GlasFabriek();
+	float inhoudTotaalGlazen = 0;
 	
 	public float dek() {
 		List<GlasIF> dienblad = glasFabriek.maakDienblad();
-		
 		for (GlasIF glas: dienblad) {
 			float inhoudGlas = glas.getContents();
-			float inhoudTotaalGlazen = 0;
 			inhoudTotaalGlazen += inhoudGlas;
 
 			System.out.println("Het inhoud per glas: "+inhoudGlas);
-			System.out.println("De totale inhoud van alle glazen: "+inhoudTotaalGlazen);
 		}
-		return 0;
+		System.out.println("De totale inhoud van alle glazen: "+inhoudTotaalGlazen);
+		return inhoudTotaalGlazen;
 	}
 
 
