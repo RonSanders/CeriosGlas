@@ -21,10 +21,14 @@ public class TafelService { // geen implements want het is geen type glas!!!!
 	public float dek() {
 		List<GlasIF> dienblad = glasFabriek.maakDienblad();
 		
+		//Glas serveren
+		if (dienblad.size()>0) {//hier moet toch ipv length... size(gebruikt worden?)
 		dienblad.remove(dienblad.size()-1);
+		}
 		
 		for (GlasIF glas: dienblad) {
 			glas.was();
+			
 			glas.copy();
 			float inhoudGlas = glas.getContents();
 			

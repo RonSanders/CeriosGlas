@@ -1,5 +1,8 @@
 package nl.cerios.glaswerk;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author rsanders
  *
@@ -31,16 +34,26 @@ public class BierGlas extends Glas implements GlasIF, Cloneable  {
 	 * Is dit de goed richting?
 	 * Waarom wil je dit doen? BierGlazen worden gemaakt in de Glasfabriek?
 	 * Is er ipv de clone methode ook een andere manier om objecten te kopieren?
+	 * @return 
 	 */
 	@Override
 	public GlasIF copy() {
-		BierGlas biertje = new BierGlas(); 
+				
+		GlasFabriek glasFabriek = new GlasFabriek();
 		
-		try {
-			biertje.clone();
-		} catch (CloneNotSupportedException e) {
-			e.printStackTrace();
-		}   
-		return biertje;
+		List<GlasIF> bierlijst = new ArrayList<GlasIF>();	
+		bierlijst.addAll(glasFabriek.maakDienblad());
+		List<GlasIF> dienblad = glasFabriek.maakDienblad();
+		
+		
+		return (GlasIF) dienblad;
+		//return (GlasIF) bierlijst;	
+		
+		//Krijg constant een ClassCastException, maar weet niet waar ik verkeerd zit? Heb je een tip?
+		//Exception in thread "main" java.lang.ClassCastException: java.util.ArrayList cannot be cast to nl.cerios.glaswerk.GlasIF
+		//at nl.cerios.glaswerk.BierGlas.copy(BierGlas.java:49)
+		//at nl.cerios.glaswerk.TafelService.dek(TafelService.java:32)
+		//at nl.cerios.glaswerk.Persoon.main(Persoon.java:12)
+
 	}
 }
