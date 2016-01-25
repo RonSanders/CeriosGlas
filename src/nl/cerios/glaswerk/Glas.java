@@ -8,7 +8,7 @@ public class Glas {
 	private float inhoud;
 	
 	public void setInhoud(float inhoud){
-		this.inhoud += inhoud;
+		this.inhoud = inhoud;
 	}
 
 	public float getInhoud() {
