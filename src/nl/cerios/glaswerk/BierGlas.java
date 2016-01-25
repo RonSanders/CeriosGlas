@@ -7,23 +7,20 @@ package nl.cerios.glaswerk;
  */
 public class BierGlas extends Glas implements GlasIF, Cloneable  {
 
-	private float inhoud = 0.3f;
-
+	@Override
 	public float getContents() {
-		return inhoud;
+		setInhoud(0.3f);
+		return getInhoud();
 	}
 	
-	public void setContents(float inhoud){
-		this.inhoud += inhoud;
-	}
-
+	@Override
 	public void breek() throws DiggelenException {
 				
 	}
 
 	@Override
 	public void was() {
-		setContents(0.001f);
+		setInhoud(0.001f);
 		
 	}
 

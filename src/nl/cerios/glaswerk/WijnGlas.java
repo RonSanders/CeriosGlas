@@ -6,11 +6,11 @@ package nl.cerios.glaswerk;
  *	Opmerking: niet groeperen het WijnGlas is een los onderdeel met eigenschappen en die staan hier in!
  */
 public class WijnGlas extends Glas implements GlasIF {
-	private float inhoud = 0.25f;
-
+	
 	@Override
 	public float getContents() {
-		return inhoud;
+		setInhoud(0.25f);
+		return getInhoud();
 	}
 
 	@Override
@@ -20,7 +20,7 @@ public class WijnGlas extends Glas implements GlasIF {
 
 	@Override
 	public void was() {
-		inhoud += 0.001f;//Dit mag niet maar werkt wel! Vond het grappig als andere optie...
+		setInhoud(0.001f);
 		
 	}
 

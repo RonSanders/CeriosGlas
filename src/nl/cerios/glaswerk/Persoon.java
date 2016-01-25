@@ -9,9 +9,8 @@ public class Persoon {
 
 	public static void main(String[] args) {
 		TafelService tafeltjedekjeservice = new TafelService();
-		tafeltjedekjeservice.dek();
+		float inhoudTotaalGlazen = tafeltjedekjeservice.dek();	
 		
-		float inhoudTotaalGlazen = TafelService.inhoudTotaalGlazen;			
 		System.out.println("De totale inhoud van alle glazen: "+inhoudTotaalGlazen);
 	}
 

@@ -5,30 +5,13 @@ package nl.cerios.glaswerk;
  *
  */
 public class Glas {
+	private float inhoud;
+	
+	public void setInhoud(float inhoud){
+		this.inhoud += inhoud;
+	}
 
-	/**
-	private float zand;
-	private float soda;
-	private float kalk;
-	
-	public float getZand() {
-		return zand;
-	}
-	public void setZand(float zand) {
-		this.zand = zand;
-	}
-	public float getSoda() {
-		return soda;
-	}
-	public void setSoda(float soda) {
-		this.soda = soda;
-	}
-	public float getKalk() {
-		return kalk;
-	}
-	public void setKalk(float kalk) {
-		this.kalk = kalk;
-	}
-	*/
-	
+	public float getInhoud() {
+		return inhoud;
+	}	
 }

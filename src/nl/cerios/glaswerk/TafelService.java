@@ -16,7 +16,7 @@ import java.util.List;
 public class TafelService { // geen implements want het is geen type glas!!!!
 	
 	GlasFabriek glasFabriek = new GlasFabriek();
-	static float inhoudTotaalGlazen = 0;
+	float inhoudTotaalGlazen;
 	
 	public float dek() {
 		List<GlasIF> dienblad = glasFabriek.maakDienblad();
