@@ -3,7 +3,7 @@ package nl.cerios.glaswerk;
 /**
  * @author rsanders
  *
- *geen implementatie, geen code > alleen declaraties
+ *	geen implementatie, geen code > alleen declaraties
  */
 public interface GlasIF {
 	float getContents();

@@ -1,11 +1,15 @@
 package nl.cerios.glaswerk;
 
+import java.util.List;
+
 /**
  * @author rsanders
  *
  * Clone methode http://stackoverflow.com/questions/869033/how-do-i-copy-an-object-in-java
  */
 public class BierGlas extends Glas implements GlasIF, Cloneable  {
+
+	private List<GlasIF> inhoud;
 
 	@Override
 	public float getContents() {
@@ -24,12 +28,20 @@ public class BierGlas extends Glas implements GlasIF, Cloneable  {
 		
 	}
 
+	
+	@Override
+	public GlasIF copy() {
+		List<GlasIF> inhoud;
+		inhoud=this.inhoud;
+		return (GlasIF) inhoud;
+
+	}
+	
 	/**
 	 *	Derek Banas T16
 	 * @return 
 	 */
-	@Override
-	public GlasIF copy() {
+	public Object clone() {
 		BierGlas biertje;
 		
 		try{
