@@ -26,7 +26,9 @@ public class WijnGlas extends Glas implements GlasIF {
 
 	@Override
 	public GlasIF copy() {
-		return null;
+		WijnGlas wijntje = new WijnGlas();
+		return wijntje;
+
 	}
 	
 	

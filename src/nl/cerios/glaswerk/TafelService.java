@@ -39,17 +39,14 @@ public class TafelService{ // geen implements want het is geen type glas!!!!
 		}
 			
 		for (GlasIF glas: dienblad) {
-			glas.was();
-			
+			glas.was();		
 			float inhoudGlas = glas.getContents();
 			inhoudTotaalGlazen += inhoudGlas;		
-			
 			System.out.println("Het inhoud per glas: "+inhoudGlas);
-		}
-
-		for (GlasIF glas2: dienblad) {
-			glas2.copy();			
 			
+			
+			float nieuweInhoudGlas = glas.copy().getContents();
+			System.out.println("Het inhoud per glas: "+nieuweInhoudGlas);
 		}
 		return inhoudTotaalGlazen;
 	}
