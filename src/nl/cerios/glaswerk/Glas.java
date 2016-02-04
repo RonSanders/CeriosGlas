@@ -13,5 +13,9 @@ public class Glas {
 
 	public float getInhoud() {
 		return inhoud;
-	}	
+	}
+
+	//public GlasIF copy(Glas glas) {
+	//
+	//}
 }

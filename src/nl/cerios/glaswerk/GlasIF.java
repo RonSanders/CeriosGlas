@@ -6,7 +6,9 @@ package nl.cerios.glaswerk;
  *	geen implementatie, geen code > alleen declaraties
  */
 public interface GlasIF {
-	float getContents();
+
+	void setInhoud(float inhoud);
+	float getInhoud();
 	void breek() throws DiggelenException;
 	void was();
 	GlasIF copy();

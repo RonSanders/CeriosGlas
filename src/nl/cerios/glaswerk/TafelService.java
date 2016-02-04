@@ -28,24 +28,24 @@ public class TafelService{ // geen implements want het is geen type glas!!!!
 		}
 		
 		//nieuw extra biertje met een nieuw object, het wordt alleen niet op het dienblad geleverd.
-		if (dienblad.isEmpty()) {
+		if (false) {
 			BierGlas nieuwBiertje2 = (BierGlas)nieuwBiertje.clone();
 				
-			System.out.println(nieuwBiertje.getContents());
-			System.out.println(nieuwBiertje2.getContents());
+			System.out.println(nieuwBiertje.getInhoud());
+			System.out.println(nieuwBiertje2.getInhoud());
 		
 			System.out.println(nieuwBiertje.hashCode());
 			System.out.println(nieuwBiertje2.hashCode());
 		}
 			
 		for (GlasIF glas: dienblad) {
-			glas.was();		
-			float inhoudGlas = glas.getContents();
+			glas.was();
+			float inhoudGlas = glas.getInhoud();
 			inhoudTotaalGlazen += inhoudGlas;		
-			System.out.println("Het inhoud per glas: "+inhoudGlas);
+			System.out.println("Het inhoud per gewassen glas: "+inhoudGlas);
 			
 			
-			float nieuweInhoudGlas = glas.copy().getContents();
+			float nieuweInhoudGlas = glas.copy().getInhoud();
 			System.out.println("Het inhoud per glas: "+nieuweInhoudGlas);
 		}
 		return inhoudTotaalGlazen;
